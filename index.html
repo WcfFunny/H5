@@ -11,10 +11,10 @@
         function success(data){
             console.los(data);
         }
-        function error(data){
-            console.log('error');
+        function error(err){
+            console.log('error:'+err.code+";"+err.message);
         }
-        window.navigator.geolocation.watchPosition(success);
+        window.navigator.geolocation.watchPosition(success,error);
     </script>
 </body>
 </html>
